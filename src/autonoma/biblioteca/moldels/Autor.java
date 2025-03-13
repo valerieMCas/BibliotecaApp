@@ -5,7 +5,7 @@
 package autonoma.biblioteca.moldels;
 
 /**
- *  Modelo que permite representa una persona
+ *  Modelo que permite representa un Autor
  * @author mariana rivas
  * @since 20250312
  * @version 1.0.0

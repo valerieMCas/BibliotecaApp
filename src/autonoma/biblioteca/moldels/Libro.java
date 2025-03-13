@@ -15,6 +15,13 @@ public class Libro {
     /// Atributos
     
     /**
+    * Representa el autor del libro. Este atributo almacena una 
+    * referencia a un objeto de la clase Autor, el cual contiene 
+    * información sobre el escritor del libro.
+    */
+    
+    private Autor autor;
+    /**
     *  identificador del libro 
     */
     private long id;
@@ -27,9 +34,10 @@ public class Libro {
     ///////////////////////////////////////////////////////////////////////
     ///Metodo Constructor
 
-    public Libro(long id, String titulo) {
+    public Libro(long id, String titulo, Autor autor) { 
         this.id = id;
         this.titulo = titulo;
+        this.autor = autor;
     }
     
     ///////////////////////////////////////////////////////////////////////
@@ -45,7 +53,11 @@ public class Libro {
     public String getTitulo(){
         return titulo;
     }
-    public void settitulo(String titulo){
+    public void setTitulo(String titulo){
         this.titulo = titulo;
+    }
+    
+    public Autor getAutor(){
+        return autor;
     }
 }

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package autonoma.biblioteca.moldels;
 
 import java.util.ArrayList;
@@ -13,27 +9,18 @@ import java.util.ArrayList;
  * @version 1.0.0
  */
 public class Biblioteca {
+    
      //////////////////////////////////////////////////////////////
     /// Atributos
-    /**
-     * Lista de libros
-     */
     private ArrayList <Libro> libros;
+    
     ///////////////////////////////////////////////////////////////////////
     ///Metodo Constructor
-    public Biblioteca(ArrayList<Libro> libros) {
-        this.libros = libros;
+    public Biblioteca() {
+        this.libros = new ArrayList();
     }
     ///////////////////////////////////////////////////////////////////////
     ///Metodo acceso
-    public ArrayList<Libro> getLibros() {
-        return libros;
-    }
-
-    public void setLibros(ArrayList<Libro> libros) {
-        this.libros = libros;
-    }
-    
     
     ///////////////////////////////////////////////////////////////////////
     ///Metodo agregar libro
@@ -45,54 +32,50 @@ public class Biblioteca {
         }
         return libros.add(libro);
     }
+    
     ///////////////////////////////////////////////////////////////////////
     ///Metodo mostrar libros
-    public String mostrarLibros() {
-        if (libros.isEmpty()) {
-            return "no hay libros en la biblioteca";
-        }
-        String resultado = "libros: ";
-        for (int i = 0; i < libros.size(); i++) {
-            resultado += "id: " + libros.get(i).getId() + ", titulo: " + libros.get(i).getTitulo();
-        }
-        return resultado;
+    public ArrayList<Libro> getLibros(){
+        return this.libros;
     }
+    
+    public ArrayList<Libro> getLibrosAlfabeticamente(){
+        return this.obtenerLibrosAlfabeticamente();
+    }
+    
     ///////////////////////////////////////////////////////////////////////
     ///Metodo eliminar libro por id
-    public boolean eliminarLibro(Libro libro, long id){
-        for (int i = 0; i < libros.size(); i++){
-            if (libros.get(i).getId() == (libro.getId())){ 
-                libros.remove(i);  
-                return true; 
-            } 
+    public boolean eliminarLibro(long id){
+        int indice = this.buscarIndiceLibro(id);
+        if(indice > 0){
+            this.libros.remove(indice);
         }
-        return false; 
+        return false;
     }
+    
     ///////////////////////////////////////////////////////////////////////
     ///Metodo buscar libro por id
     public Libro buscarLibro(long id){
-        for(int i=0; i<libros.size(); i++){
-            if(libros.get(i).getId() == id ){
-                return libros.get(i);
+        for(Libro l : libros){
+            if(l.getId() == id){
+                return l;
             }
         }
-        
         return null;
     }
+    
     ///////////////////////////////////////////////////////////////////////
     ///Metodo actualizar libro por id
     public boolean actualizarLibro(Libro libro, long id) {
-        for (int i = 0; i < libros.size(); i++) {
-            if (libros.get(i).getId() == id) {
-                libros.get(i).setTitulo(libro.getTitulo());   
-                return true; 
-            }
+        int indice = this.buscarIndiceLibro(id);
+        if(indice > 0){
+            this.libros.set(indice, libro);
         }
         return false; 
     }
     ///////////////////////////////////////////////////////////////////////
     ///Metodo obtener libros por orden alfabetico
-    public ArrayList obtenerLibrosAlfabeticamente(){
+    private ArrayList obtenerLibrosAlfabeticamente(){
     ArrayList<Libro> librosOrdenados = new ArrayList<>(libros);
     for (int i = 0; i < librosOrdenados.size()- 1; i++) { 
         for (int j = 0; j < librosOrdenados.size()- 1 - i; j++) { 
@@ -103,7 +86,18 @@ public class Biblioteca {
             }
         }
     }  
-    return librosOrdenados; // Devuelve la lista ordenad       
+    return librosOrdenados; // Devuelve la lista ordenada       
    }   
-    
+   ///////////////////////////////////////////////////////////////////////
+   ///Metodo privado para buscar el indice de un libro en nuestra lista de libros
+   
+   private int buscarIndiceLibro(long id){
+       for(int i = 0; i<this.libros.size(); i++){
+           Libro l = this.libros.get(i);
+           if(l.getId() == id){
+           return i;
+           }
+       }
+       return -1;
+   }
 }

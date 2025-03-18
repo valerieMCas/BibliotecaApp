@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 public class VentanaAgregar extends javax.swing.JDialog {
     
     private Biblioteca biblioteca;
+    
 
     /**
      * Creates new form VentanaAgregar
@@ -64,10 +65,8 @@ public class VentanaAgregar extends javax.swing.JDialog {
         txtDocumento = new javax.swing.JTextField();
         txtCorreo = new javax.swing.JTextField();
         txtProfesion = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         txtTitulo = new javax.swing.JTextField();
-        txtIdLibro = new javax.swing.JTextField();
         btnAgregar = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -178,10 +177,6 @@ public class VentanaAgregar extends javax.swing.JDialog {
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("ID :");
-
         jLabel11.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("TITULO :");
@@ -189,12 +184,6 @@ public class VentanaAgregar extends javax.swing.JDialog {
         txtTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTituloActionPerformed(evt);
-            }
-        });
-
-        txtIdLibro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdLibroActionPerformed(evt);
             }
         });
 
@@ -313,21 +302,18 @@ public class VentanaAgregar extends javax.swing.JDialog {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtIdLibro))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(10, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -340,14 +326,13 @@ public class VentanaAgregar extends javax.swing.JDialog {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(txtIdLibro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel11)
+                        .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -397,10 +382,6 @@ public class VentanaAgregar extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTituloActionPerformed
 
-    private void txtIdLibroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdLibroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdLibroActionPerformed
-
     private void btnAgregarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseEntered
         this.mouseEntered(btnAgregar);
     }//GEN-LAST:event_btnAgregarMouseEntered
@@ -423,12 +404,13 @@ public class VentanaAgregar extends javax.swing.JDialog {
 
     private void btnAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseClicked
         
-        if(txtCorreo.getText().trim().isEmpty() || txtDocumento.getText().trim().isEmpty() || txtEditorial.getText().trim().isEmpty() || txtIdLibro.getText().trim().isEmpty() || txtNombre.getText().trim().isEmpty() || txtProfesion.getText().trim().isEmpty() || txtTitulo.getText().trim().isEmpty()){
+        if(txtCorreo.getText().trim().isEmpty() || txtDocumento.getText().trim().isEmpty() || txtEditorial.getText().trim().isEmpty()  || txtNombre.getText().trim().isEmpty() || txtProfesion.getText().trim().isEmpty() || txtTitulo.getText().trim().isEmpty()){
             JOptionPane.showMessageDialog(null, "¡hay un campo vacio!");
             return;
         }
         try{
-            long id = Long.parseLong(txtIdLibro.getText());
+            //long id = Long.parseLong(txtIdLibro.getText());
+            
             String Nombre = this.txtNombre.getText();
             String Documento = this.txtDocumento.getText();
             String Correo = this.txtCorreo.getText();
@@ -437,14 +419,13 @@ public class VentanaAgregar extends javax.swing.JDialog {
             String Titulo = this.txtTitulo.getText();
         
             Autor a = new Autor( Editorial, Profesion, Nombre, Documento, Correo);
-            Libro l = new Libro(id, Titulo, a);
+            Libro l = new Libro(Titulo, a);
             
             if(this.biblioteca.agregarLibro(l)){
                 JOptionPane.showMessageDialog(null, "El Libro "+ Titulo +" fue agregado exitosamente!!");
                 this.dispose();
             }else{
                 JOptionPane.showMessageDialog(null, "El Libro "+ Titulo +" no pudo ser agregado exitosamente \n"
-                                                                        +"1. La id "+ id +" ya existe \n"
                                                                         +"2. Error al agregar el Libro");
             }
             
@@ -470,7 +451,6 @@ public class VentanaAgregar extends javax.swing.JDialog {
     private javax.swing.JPanel btnAgregar;
     private javax.swing.JPanel btnSalir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -491,7 +471,6 @@ public class VentanaAgregar extends javax.swing.JDialog {
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtDocumento;
     private javax.swing.JTextField txtEditorial;
-    private javax.swing.JTextField txtIdLibro;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtProfesion;
     private javax.swing.JTextField txtTitulo;

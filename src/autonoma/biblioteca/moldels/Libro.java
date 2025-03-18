@@ -31,13 +31,20 @@ public class Libro {
     */
     private String titulo;
     
+    /**
+    *  contador para el id autoincremenatal 
+    */
+    private static int contadorLibros = 0;
+    
     ///////////////////////////////////////////////////////////////////////
     ///Metodo Constructor
 
-    public Libro(long id, String titulo, Autor autor) { 
-        this.id = id;
+    public Libro(String titulo, Autor autor) { 
+        Libro.contadorLibros ++;
+        this.id = Libro.contadorLibros;
         this.titulo = titulo;
         this.autor = autor;
+        
     }
     
     ///////////////////////////////////////////////////////////////////////

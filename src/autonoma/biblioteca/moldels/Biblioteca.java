@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Modelo que permite crear metodos
- * @author maria
+ * @author mariana rivas y valerie moreno
  * @since 20250314
  * @version 1.0.0
  */

@@ -12,8 +12,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
- *
- * @author Kamii
+ * Interfaz grafica de Actualizar Libro
+ * @author Maria camila Prada Cortes
+ * @since 20250316
+ * @version 1.0.0
  */
 public class ActualizarLibro extends javax.swing.JDialog {
     private Biblioteca biblioteca;
@@ -44,7 +46,7 @@ public class ActualizarLibro extends javax.swing.JDialog {
         this.txtDocumento.setText(libro.getAutor().getDocumentoIdentidad());
         this.txtEditorial.setText(libro.getAutor().getEditorial());
         this.txtProfesion.setText(libro.getAutor().getProfesion());
-        this.txtIdLibro.setText(String.valueOf(libro.getId()));
+        //this.txtIdLibro.setText(String.valueOf(libro.getId()));
         this.txtNombre.setText(libro.getAutor().getNombre());
         this.txtTitulo.setText(libro.getTitulo());
     }
@@ -76,10 +78,8 @@ public class ActualizarLibro extends javax.swing.JDialog {
         txtDocumento = new javax.swing.JTextField();
         txtCorreo = new javax.swing.JTextField();
         txtProfesion = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         txtTitulo = new javax.swing.JTextField();
-        txtIdLibro = new javax.swing.JTextField();
         btnActualizar = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -190,10 +190,6 @@ public class ActualizarLibro extends javax.swing.JDialog {
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("ID :");
-
         jLabel11.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("TITULO :");
@@ -201,12 +197,6 @@ public class ActualizarLibro extends javax.swing.JDialog {
         txtTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTituloActionPerformed(evt);
-            }
-        });
-
-        txtIdLibro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdLibroActionPerformed(evt);
             }
         });
 
@@ -325,20 +315,17 @@ public class ActualizarLibro extends javax.swing.JDialog {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtIdLibro))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(13, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -349,17 +336,17 @@ public class ActualizarLibro extends javax.swing.JDialog {
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(txtIdLibro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel11)
+                        .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel5)
+                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -409,12 +396,8 @@ public class ActualizarLibro extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTituloActionPerformed
 
-    private void txtIdLibroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdLibroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdLibroActionPerformed
-
     private void btnActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizarMouseClicked
-        long id = Long.parseLong(txtIdLibro.getText());
+        //long id = Long.parseLong(txtIdLibro.getText());
         String Nombre = this.txtNombre.getText();
         String Documento = this.txtDocumento.getText();
         String Correo = this.txtCorreo.getText();
@@ -422,7 +405,7 @@ public class ActualizarLibro extends javax.swing.JDialog {
         String Profesion = this.txtProfesion.getText();
         String Titulo = this.txtTitulo.getText();
         
-        this.libro.setId(id);
+        //this.libro.setId(id);
         this.libro.setTitulo(Titulo);
         this.libro.getAutor().setNombre(Nombre);
         this.libro.getAutor().setCorreoElectronico(Correo);
@@ -431,7 +414,7 @@ public class ActualizarLibro extends javax.swing.JDialog {
         this.libro.getAutor().setProfesion(Profesion);
         
         this.biblioteca.actualizarLibro(this.libro, this.libro.getId());
-        JOptionPane.showMessageDialog(null, "el Libro:" + this.libro.getTitulo() + " fue actualizado exitosamente");
+        JOptionPane.showMessageDialog(null, "el Libro: " + this.libro.getTitulo() + " fue actualizado exitosamente");
         this.dispose();
     }//GEN-LAST:event_btnActualizarMouseClicked
 
@@ -467,7 +450,6 @@ public class ActualizarLibro extends javax.swing.JDialog {
     private javax.swing.JPanel btnActualizar;
     private javax.swing.JPanel btnSalir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -488,7 +470,6 @@ public class ActualizarLibro extends javax.swing.JDialog {
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtDocumento;
     private javax.swing.JTextField txtEditorial;
-    private javax.swing.JTextField txtIdLibro;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtProfesion;
     private javax.swing.JTextField txtTitulo;

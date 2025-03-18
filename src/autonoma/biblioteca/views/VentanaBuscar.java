@@ -12,8 +12,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
- *
- * @author Kamii
+ * Interfaz grafica de Buscar Libro
+ * @author Maria camila Prada Cortes
+ * @since 20250316
+ * @version 1.0.0
  */
 public class VentanaBuscar extends javax.swing.JDialog {
     

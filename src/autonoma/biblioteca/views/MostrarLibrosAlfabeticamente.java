@@ -14,8 +14,10 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
 /**
- *
- * @author Kamii
+ * Interfaz grafica de Mostrar Libros Alfabeticamente Libro
+ * @author Maria camila Prada Cortes
+ * @since 20250316
+ * @version 1.0.0
  */
 public class MostrarLibrosAlfabeticamente extends javax.swing.JDialog {
     private Biblioteca biblioteca;

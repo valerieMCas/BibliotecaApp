@@ -10,8 +10,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 /**
- *
- * @author Kamii
+ * Interfaz grafica Ventana Principal
+ * @author Maria camila Prada Cortes
+ * @since 20250316
+ * @version 1.0.0
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
     private Biblioteca biblioteca;
